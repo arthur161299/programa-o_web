@@ -1,29 +1,27 @@
 import React, { useState } from 'react';
 
 const App = () => {
-  // Estado para armazenar a lista de tarefas
-  // Structure: {id: string, text: string} is common, but for simplicity, we keep it as string array for now.
-  const [tarefas, setTarefas] = useState([]);
-  // Estado para armazenar o valor atual do input
+  
+  
   const [input, setInput] = useState("");
 
   /**
-   * Adiciona uma nova tarefa à lista se o input não estiver vazio.
+   * Adiciona uma nova tarefa a lista se o inpu nao estiver vazio.
    */
   function adicionarTarefa() {
     if (input.trim()) {
-      // Adiciona o novo input ao array de tarefas e limpa o campo
+      // Adiciona o novo input ao array, de tarefas e lipa o campo
       setTarefas([...tarefas, input.trim()]);
       setInput("");
     }
   }
 
   /**
-   * Remove uma tarefa da lista pelo seu índice.
-   * @param {number} indexParaRemover O índice do elemento a ser removido.
+   
+   * @param {number} indexParaRemover O índice do elemento a ser removidoo.
    */
   function removerTarefa(indexParaRemover) {
-    // Cria um novo array de tarefas que exclui o item no índice fornecido.
+    
     const novasTarefas = tarefas.filter((_, index) => index !== indexParaRemover);
     setTarefas(novasTarefas);
   }
@@ -32,12 +30,12 @@ const App = () => {
     <div className="min-h-screen bg-gray-50 p-4 sm:p-8 flex items-center justify-center font-sans">
       <div className="w-full max-w-lg bg-white shadow-2xl rounded-2xl p-6 md:p-10 border border-gray-100 transform hover:scale-[1.01] transition duration-300">
         
-        {/* Título Principal */}
+        {}
         <h1 className="text-4xl font-extrabold text-emerald-600 mb-8 text-center tracking-tight">
           Lista de Afazeres ✨
         </h1>
 
-        {/* Área de Input e Adicionar */}
+        {}
         <div className="flex gap-3 mb-8">
           <input
             type="text"
